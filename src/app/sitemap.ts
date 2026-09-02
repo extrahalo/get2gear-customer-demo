@@ -2,6 +2,9 @@ import type { MetadataRoute } from "next";
 import { routing } from "@/i18n/routing";
 import { SITE_URL } from "@/lib/site";
 
+// GitHub Pages is a static host, so this route must be generated at build time.
+export const dynamic = "force-static";
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const services = ["engineering", "equipment", "automation"];
   const localized = (path = "") => routing.locales.map((locale) => ({
