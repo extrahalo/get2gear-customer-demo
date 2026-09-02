@@ -1,0 +1,27 @@
+node_modules/
+.next/
+out/
+build/
+.env
+.env.local
+.env.*.local
+.DS_Store
+next-env.d.ts
+*.tsbuildinfo
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Internal client materials. These are not required to build the website and
+# must never be included in the public customer-demo repository.
+Get 2 Gear - info/
+G2G логотип 2026/
+output/
+tmp/
+CONTENT_INVENTORY_RU.md
+MEDIA_INVENTORY.md
+DESIGN_DIRECTION.md
+GET2GEAR_COMPANY_FILM_75S_RU.md
+AGENTS.md
+CLAUDE.md

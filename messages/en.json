@@ -1,0 +1,277 @@
+{
+  "meta": {
+    "title": "Get2Gear — industrial engineering and contamination control",
+    "description": "Engineering, industrial equipment, filtration and contamination control for enterprises across Kazakhstan and the CIS.",
+    "ogImageAlt": "Get2Gear industrial solutions for the mining sector"
+  },
+  "header": {
+    "navLabel": "Primary navigation",
+    "menu": "Open menu",
+    "close": "Close menu",
+    "nav": {
+      "directions": "Disciplines",
+      "about": "Company",
+      "solutions": "Solutions",
+      "products": "Products",
+      "results": "Experience",
+      "videos": "Videos",
+      "contacts": "Contacts"
+    },
+    "serviceLabel": "Get2Gear disciplines",
+    "services": {
+      "engineering": "Engineering",
+      "equipment": "Equipment",
+      "automation": "IT & automation"
+    },
+    "request": "Discuss a project"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Engineering · Supply · Contamination control",
+      "title": "Industry moves when everything works together.",
+      "lead": "We engineer, supply and implement equipment and digital solutions for industrial enterprises across Kazakhstan and the CIS.",
+      "primary": "Discuss a project",
+      "secondary": "Flagship solution",
+      "sector": "Mining industry",
+      "sectorLabel": "Sector",
+      "region": "Kazakhstan · CIS",
+      "regionLabel": "Region",
+      "scroll": "Continue",
+      "imageAlt": "Open-pit mining operation"
+    },
+    "statement": {
+      "label": "Get2Gear / profile",
+      "title": "One partner for complex industrial challenges — from the engineering idea to commissioning on site.",
+      "body": "Get2Gear brings together engineering, process equipment supply and automation. Every solution is built around the operation, timeline and requirements of a specific facility."
+    },
+    "divisions": {
+      "label": "Core divisions",
+      "title": "Three disciplines. One operating logic.",
+      "items": [
+        {
+          "num": "01",
+          "title": "Engineering",
+          "desc": "Design and implementation of process systems for safe, controlled and continuous operation.",
+          "cta": "Discuss a challenge",
+          "slug": "engineering",
+          "image": "/images/engineering-service.jpg"
+        },
+        {
+          "num": "02",
+          "title": "Equipment",
+          "desc": "Selection, supply, installation and commissioning of industrial equipment and spare parts.",
+          "cta": "Request supply",
+          "slug": "equipment",
+          "image": "/images/equipment-service.jpg"
+        },
+        {
+          "num": "03",
+          "title": "IT & automation",
+          "desc": "Monitoring, data management and digital tools for production processes.",
+          "cta": "Discuss a system",
+          "slug": "automation",
+          "image": "/images/it-service.jpg"
+        }
+      ]
+    },
+    "services": {
+      "back": "All disciplines",
+      "navigationLabel": "Get2Gear disciplines",
+      "approachLabel": "The Get2Gear approach",
+      "approachTitle": "A structured route from an operational challenge to dependable use.",
+      "offerLabel": "In focus",
+      "ctaLabel": "Next step",
+      "ctaTitle": "Let us discuss the challenge in operational terms.",
+      "ctaBody": "Send source data, a site description or a technical question — the Get2Gear team will propose a concrete next step.",
+      "cta": "Contact the team",
+      "items": {
+        "engineering": {
+          "number":"01", "eyebrow":"Engineering", "title":"A production system begins with an exact engineering decision.",
+          "lead":"We design and implement process and digital systems for mining operations — from solution architecture to site commissioning.",
+          "image":"/images/engineering-service.jpg", "imageAlt":"Get2Gear engineer at an industrial site",
+          "focus":[{"title":"Production automation","body":"Systems for cost accounting, process control and production-data management."},{"title":"Asset management","body":"Approaches to maintenance, repair and the management of fixed assets."},{"title":"Engineering data","body":"Enterprise data buses, digital archives and one coherent information environment."}],
+          "detailLabel":"Engineering solutions", "detailTitle":"Digital environments for mining, service and production.",
+          "detailItems":[{"title":"Dynamics AX for mining","body":"An ERP environment for managing the resources and processes of a mining operation."},{"title":"Maintenance management","body":"Tools for maintenance, repair and service operations."},{"title":"Data management","body":"A structure for engineering, production and enterprise information."},{"title":"Mining digitalisation","body":"Data and process tools for mining operations."},{"title":"Well service","body":"Digital solutions for engineering and service processes at wells."},{"title":"Oil and gas","body":"Digitalisation of oil and gas production processes."},{"title":"Archives and passports","body":"Electronic archives, catalogues and digital asset passports."},{"title":"Enterprise software","body":"Development, implementation and support of application software."}],
+          "steps":[{"title":"Diagnosis","body":"We clarify the operational challenge, site constraints and outcome criteria."},{"title":"Architecture","body":"We define the solution scope, system roles and technical requirements."},{"title":"Implementation","body":"We coordinate supply, integration, installation and commissioning work."},{"title":"Handover","body":"We prepare documentation, train personnel and support the start-up."}],
+          "offerTitle":"Engineering products and digital environment", "offerBody":"Tools for mining operations, maintenance management and a controlled flow of data.",
+          "offerItems":["ERP for the mining industry", "Maintenance and service-management systems", "Enterprise data and digital archives"]
+        },
+        "equipment": {
+          "number":"02", "eyebrow":"Equipment", "title":"Equipment must suit not only the specification, but the operating duty.",
+          "lead":"We select, supply and commission process and power equipment, components and spare parts for industrial operations.",
+          "image":"/images/equipment-service.jpg", "imageAlt":"Industrial equipment at a production site",
+          "focus":[{"title":"Solution selection","body":"We balance function, operating conditions, manufacturing time and technical constraints."},{"title":"Supply and start-up","body":"We coordinate delivery, site supervision and commissioning at the facility."},{"title":"Operation","body":"We help prepare personnel and organise critical consumables and spare parts."}],
+          "detailLabel":"Equipment workflow", "detailTitle":"More than supply: preparation for dependable operation.",
+          "detailItems":[{"title":"Process equipment","body":"Selection of equipment, pumps, components and spare parts around site conditions."},{"title":"Supply and commissioning","body":"Coordination of delivery, installation and putting the solution into operation."},{"title":"Site supervision","body":"Technical support for work at the customer’s facility."},{"title":"Personnel training","body":"Knowledge transfer to the team operating the solution."},{"title":"Customer warehouse","body":"Organisation of the customer’s consumables and spare-parts warehouse."},{"title":"Reconstruction","body":"Upgrading existing facilities and systems around their actual condition."}],
+          "steps":[{"title":"Request","body":"We review the equipment code, technical data, drawings or a description of the problem."},{"title":"Selection","body":"We assemble a technically sound configuration and supply options."},{"title":"Delivery","body":"We support equipment delivery and the required documentation."},{"title":"Start-up","body":"We support installation, commissioning and the handover to the site team."}],
+          "offerTitle":"A complete equipment workflow", "offerBody":"From individual components to a supply programme for a production facility.",
+          "offerItems":["Pumps and process equipment", "Protective coatings and connecting elements", "Spare parts, site supervision and training"]
+        },
+        "automation": {
+          "number":"03", "eyebrow":"IT and automation", "title":"A digital system matters when its data improves decisions on the plant floor.",
+          "lead":"We design and implement solutions for monitoring, control, data storage and the automation of industrial processes.",
+          "image":"/images/it-service.jpg", "imageAlt":"Get2Gear digital industrial system",
+          "focus":[{"title":"Monitoring","body":"We bring process data together into a clear environment for control and operational analysis."},{"title":"Management","body":"We connect production, service and corporate processes into one working scenario."},{"title":"Data storage","body":"We establish a reliable structure for archives, catalogues and digital asset passports."}],
+          "detailLabel":"IT products", "detailTitle":"Specific platforms for operational and enterprise environments.",
+          "detailItems":[{"title":"Microsoft SharePoint","body":"Enterprise portals, collaboration and document management."},{"title":"Microsoft Dynamics CRM","body":"Customer-relationship and workflow management."},{"title":"Microsoft Dynamics AX","body":"An enterprise platform for resource management."},{"title":"Manufacturing Execution System (MES)","body":"Support for managing and executing manufacturing operations."},{"title":"MineSense","body":"A digital tool for mining-industry tasks."},{"title":"DATA ТЭК","body":"Work with energy-sector industry data."}],
+          "steps":[{"title":"Discovery","body":"We study the production specifics, users and existing data sources."},{"title":"Design","body":"We align the architecture, documentation and the set of tools to be implemented."},{"title":"Delivery","body":"We adapt software, connect equipment and complete testing."},{"title":"Go-live","body":"We hand over the system, train users and support its continued development."}],
+          "offerTitle":"Digital products for industry", "offerBody":"Platforms for collaboration, resource management, production operations and data.",
+          "offerItems":["Microsoft SharePoint and enterprise portals", "Microsoft Dynamics CRM and AX", "MES, MineSense and industry data repositories"]
+        }
+      }
+    },
+    "contamination": {
+      "label": "Flagship expertise",
+      "title": "Clean oil is a controlled equipment asset.",
+      "body": "Moisture and solid particles accelerate component wear. Get2Gear combines reservoir protection, offline and bypass filtration, sampling and condition monitoring into one contamination-control system.",
+      "cta": "Explore the systems",
+      "imageAlt": "Des-Case DC-RS rebuildable steel breather"
+    },
+    "systems": {
+      "label": "Product systems",
+      "title": "Protect. Filter. Verify.",
+      "note": "Des-Case and RMF Systems solutions for protecting, cleaning and monitoring industrial fluids.",
+      "items": {
+        "breathers": {
+          "title": "Protect reservoirs from moisture and particles",
+          "body": "Breathers are selected around airflow, environmental exposure, reservoir type and operating duty — from compact units to severe-duty industrial series.",
+          "imageAlt": "Range of Des-Case industrial breathers",
+          "products": {
+            "ventGuard": "VentGuard DC-VG-2",
+            "extremeDuty": "Extreme Duty DC-XD-6",
+            "rebuildableSteel": "Rebuildable Steel DC-RS"
+          }
+        },
+        "filtration": {
+          "title": "Offline and bypass filtration",
+          "body": "RMF Systems filtration circuits help maintain a target fluid cleanliness level without stopping the primary equipment.",
+          "imageAlt": "RMF Systems offline filtration unit",
+          "products": {
+            "kl121": "KL Series — model 121",
+            "olu": "OLU offline filtration units",
+            "bypass": "Bypass filtration modules"
+          }
+        },
+        "monitoring": {
+          "title": "Monitor and verify the outcome",
+          "body": "Control starts with measurement. We select tools for representative sampling, particle counting and fluid-condition observation in the live process.",
+          "imageAlt": "Des-Case CMC 3.2 condition monitoring system",
+          "products": {
+            "cmc": "Condition Monitoring Center CMC 3.2",
+            "sampling": "Sampling points and kits",
+            "analytics": "Cleanliness and contamination trend analysis"
+          }
+        }
+      }
+    },
+    "results": {
+      "label": "Field experience",
+      "kicker": "Get2Gear in practice · East Kazakhstan",
+      "title": "Contamination control for a mining operation.",
+      "body": "Des-Case breathers and solutions for lubricant storage, transfer and cleaning were implemented at a mining site.",
+      "disclaimer": "One integrated circuit connects reservoir protection, filtration and oil-condition monitoring in daily operation.",
+      "imageAlt": "Des-Case and RMF contamination-control product range",
+      "caption": "Des-Case and RMF Systems contamination-control solutions",
+      "stats": [
+        { "value": "2021", "label": "year recorded in the project material" },
+        { "value": "3", "label": "solution layers: protection, filtration and monitoring" },
+        { "value": "EKR", "label": "implementation region" }
+      ]
+    },
+    "economics": {
+      "label": "Reliability economics",
+      "title": "Measure the cost of downtime, not only the filter.",
+      "body": "We compare failure risk, oil consumption, component life and service cost. Each calculation uses site-specific inputs — without universal promises or unsupported percentages.",
+      "cta": "Request an assessment"
+    },
+    "industries": {
+      "label": "Industry focus",
+      "title": "Solutions for severe operating conditions.",
+      "items": [
+        { "number": "01", "title": "Mining", "body": "Mobile equipment, crushing, conveyors, hydraulic and lubrication systems." },
+        { "number": "02", "title": "Oil & gas", "body": "Pumping, compression and process assets with high reliability requirements." },
+        { "number": "03", "title": "EPC & industrial infrastructure", "body": "Packaged supply, integration and technical support throughout the project." }
+      ]
+    },
+    "videos": {
+      "label": "Seven stories",
+      "title": "Seven stories about industrial reliability.",
+      "note": "Company, technology, products, field experience, economics and industries form one concise video series.",
+      "status": "Get2Gear / Film",
+      "statusShort": "Film",
+      "duration": "30–60 sec",
+      "placements": {
+        "profile": "Company profile",
+        "solution": "Contamination control",
+        "products": "Product system",
+        "results": "Case and outcomes",
+        "economics": "Solution economics",
+        "industries": "Industries"
+      },
+      "items": {
+        "company": { "title": "Get2Gear: company profile", "summary": "A concise introduction to the team, approach and operating geography." },
+        "contamination": { "title": "Why oil cleanliness matters", "summary": "A visual explanation of particles, moisture and ISO 4406 cleanliness codes." },
+        "breathers": { "title": "Des-Case breathers", "summary": "Operating principle, selection logic and severe-duty DC-RS and DC-XD series." },
+        "filtration": { "title": "RMF bypass filtration", "summary": "How an offline circuit cleans fluid without stopping the machine." },
+        "case": { "title": "Mining-site case study", "summary": "From the identified risk to an implemented contamination-control system." },
+        "economics": { "title": "The economics of dirty oil", "summary": "Downtime, component life and the logic behind an investment assessment." },
+        "industries": { "title": "Industries and operating conditions", "summary": "Mining, oil and gas, EPC and severe industrial duty." }
+      }
+    },
+    "capabilities": {
+      "label": "Integrated approach",
+      "title": "From specification to reliable operation.",
+      "metric": "360°",
+      "metricText": "project cycle",
+      "items": [
+        { "title": "Challenge analysis", "desc": "We study the process, site constraints and production requirements." },
+        { "title": "Selection and engineering", "desc": "We shape the solution around function, timing and budget." },
+        { "title": "Supply and commissioning", "desc": "We coordinate delivery, supervision and commissioning work." },
+        { "title": "Training and support", "desc": "We prepare personnel and support the system after start-up." }
+      ]
+    },
+    "policies": {
+      "label":"Quality and safety", "title":"Dependable work requires discipline at every stage.", "body":"Across the project, the site and its documentation, we focus on process quality, team safety and clear accountability.",
+      "items":[{"number":"01","title":"Safety and occupational health","body":"We consider site requirements, safe working conditions and protective equipment when planning work."},{"number":"02","title":"Quality and accountability","body":"We improve processes through team preparation, delivery control and feedback."},{"number":"03","title":"Documentation on request","body":"Current technical documents and supply conditions are provided for the selected solution on request."}]
+    },
+    "equipment": {
+      "label": "Technical supply",
+      "title": "Need a component, equivalent or complete package?",
+      "body": "Send the manufacturer, equipment code or a description of the requirement. Get2Gear will check supply options and prepare a proposal.",
+      "cta": "Request a proposal",
+      "meta": ["Pumping equipment", "Automation", "Drives", "Spare parts"]
+    },
+    "brands": {
+      "label": "Manufacturer portfolio",
+      "title": "Equipment from global brands",
+      "note": "Equipment and components are selected around the technical requirements, operating conditions and objectives of each facility.",
+      "items": ["DES-CASE", "RMF SYSTEMS", "ABB", "Flowserve", "Siemens", "Grundfos", "Alfa Laval", "Phoenix Contact", "Pepperl+Fuchs"]
+    },
+    "news": {
+      "label": "News and expertise",
+      "title": "Practice, technology and projects",
+      "archive": "Get2Gear knowledge base",
+      "items": [
+        { "tag": "Contamination control", "title": "How to read an ISO 4406 cleanliness code", "status": "Technical insight" },
+        { "tag": "Filtration", "title": "When an offline filtration circuit is needed", "status": "Practical guide" },
+        { "tag": "Engineering", "title": "How a reliable technical solution is formed", "status": "Expert perspective" }
+      ]
+    },
+    "contact": {
+      "label": "Next step",
+      "title": "Tell us what needs to work better.",
+      "body": "Equipment, contamination control, automation or an integrated engineering challenge — let us start with a short conversation.",
+      "email": "Send an email",
+      "whatsapp": "Contact via WhatsApp",
+      "phoneLabel":"Phones", "locationsLabel":"Offices", "socialLabel":"Social",
+      "locations":["Almaty · Timiryazeva 15B, BC Yuzhny","Astana · Baraeva 14","Shymkent · Aiteke bi 153B"],
+      "formLabel":"Brief enquiry", "formTitle":"Request the next step", "requestType":"What do you need", "name":"Your name", "phone":"Phone", "message":"Describe the challenge", "submit":"Prepare email", "submitted":"Opening your email application…",
+      "options":[{"value":"documentation","label":"Technical documentation"},{"value":"proposal","label":"Commercial proposal"},{"value":"consultation","label":"Consultation"},{"value":"project","label":"Engineering or IT project"}]
+    },
+    "footer": {
+      "tagline": "Engineering · Equipment · Contamination control",
+      "rights": "All rights reserved",
+      "locations": "Almaty · Astana · Shymkent"
+    }
+  }
+}
