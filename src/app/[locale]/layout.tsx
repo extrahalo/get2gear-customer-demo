@@ -98,7 +98,7 @@ export default async function LocaleLayout({
     "@type": "Organization",
     name: "Get2Gear",
     url: SITE_URL,
-    logo: `${SITE_URL}/images/get2gear-logo.png`,
+    logo: `${SITE_URL}/images/get2gear-logo-horizontal.png`,
     email: CONTACT_EMAIL,
     areaServed: ["Kazakhstan", "CIS"],
     availableLanguage: ["Russian", "Kazakh", "English"],

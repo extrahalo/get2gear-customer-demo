@@ -42,10 +42,10 @@ export default function SiteHeader() {
         <div className="site-header__inner">
           <Link href="/" className="brand-lockup" aria-label="Get2Gear">
             <Image
-              src={assetPath("/images/get2gear-logo.png")}
+              src={assetPath("/images/get2gear-logo-horizontal.png")}
               alt="Get2Gear"
-              width={300}
-              height={110}
+              width={1002}
+              height={135}
               priority
             />
           </Link>

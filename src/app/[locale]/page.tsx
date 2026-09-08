@@ -530,7 +530,7 @@ export default async function HomePage({
         <div className="shell site-footer__top">
           <div className="site-footer__brand">
             <span className="site-footer__logo">
-              <Image src={assetPath("/images/get2gear-logo.png")} alt="Get2Gear" width={300} height={110} />
+              <Image src={assetPath("/images/get2gear-logo-horizontal.png")} alt="Get2Gear" width={1002} height={135} />
             </span>
             <p>{t("footer.tagline")}</p>
           </div>
