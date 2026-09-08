@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import LocaleSwitcher from "@/components/LocaleSwitcher";
-import { CONTACT_EMAIL } from "@/lib/site";
+import { assetPath, CONTACT_EMAIL } from "@/lib/site";
 
 const NAV_ITEMS = ["directions", "about", "solutions", "products", "results", "videos", "contacts"] as const;
 const SERVICE_ITEMS = ["engineering", "equipment", "automation"] as const;
@@ -42,7 +42,7 @@ export default function SiteHeader() {
         <div className="site-header__inner">
           <Link href="/" className="brand-lockup" aria-label="Get2Gear">
             <Image
-              src="/images/get2gear-logo.png"
+              src={assetPath("/images/get2gear-logo.png")}
               alt="Get2Gear"
               width={300}
               height={110}

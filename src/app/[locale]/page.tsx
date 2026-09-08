@@ -17,6 +17,7 @@ import {
   CONTACT_PHONE_ALT,
   CONTACT_PHONE_HREF,
   CONTACT_PHONE_ALT_HREF,
+  assetPath,
   INSTAGRAM_HREF,
   WHATSAPP_HREF,
 } from "@/lib/site";
@@ -96,7 +97,7 @@ export default async function HomePage({
       <section className="hero" data-dark>
         <Image
           className="hero__image"
-          src="/images/hero-mine.jpg"
+          src={assetPath("/images/hero-mine.jpg")}
           alt={t("hero.imageAlt")}
           fill
           priority
@@ -166,7 +167,7 @@ export default async function HomePage({
           {divisions.map((division) => (
             <article className="division-card" key={division.num} data-reveal>
               <Image
-                src={division.image}
+                src={assetPath(division.image)}
                 alt=""
                 fill
                 sizes="(max-width: 900px) 100vw, 33vw"
@@ -209,7 +210,7 @@ export default async function HomePage({
           <figure className="contamination__visual" data-reveal>
             <div className="contamination__image-grid" aria-hidden="true" />
             <Image
-              src="/images/products/descase-dc-rs.webp"
+              src={assetPath("/images/products/descase-dc-rs.webp")}
               alt={t("contamination.imageAlt")}
               width={1200}
               height={1200}
@@ -244,7 +245,7 @@ export default async function HomePage({
               <article className={`system-card system-card--${system.id}`} key={system.id}>
                 <div className="system-card__visual" data-reveal>
                   <Image
-                    src={system.image}
+                    src={assetPath(system.image)}
                     alt={copy.imageAlt}
                     fill
                     sizes="(max-width: 900px) 100vw, 50vw"
@@ -300,7 +301,7 @@ export default async function HomePage({
           <div className="results__media">
             <figure data-reveal>
               <Image
-                src={proofGallery[0].image}
+                src={assetPath(proofGallery[0].image)}
                 alt={t("results.imageAlt")}
                 width={proofGallery[0].width}
                 height={proofGallery[0].height}
@@ -529,7 +530,7 @@ export default async function HomePage({
         <div className="shell site-footer__top">
           <div className="site-footer__brand">
             <span className="site-footer__logo">
-              <Image src="/images/get2gear-logo.png" alt="Get2Gear" width={300} height={110} />
+              <Image src={assetPath("/images/get2gear-logo.png")} alt="Get2Gear" width={300} height={110} />
             </span>
             <p>{t("footer.tagline")}</p>
           </div>

@@ -8,6 +8,7 @@ import {
   CONTACT_EMAIL,
   CONTACT_PHONE,
   CONTACT_PHONE_HREF,
+  assetPath,
   SITE_URL,
 } from "@/lib/site";
 
@@ -95,7 +96,7 @@ export default async function ServicePage({
       <section className="service-hero" data-dark>
         <Image
           className="service-hero__image"
-          src={copy.image}
+          src={assetPath(copy.image)}
           alt={copy.imageAlt}
           fill
           priority
@@ -189,7 +190,7 @@ export default async function ServicePage({
 
       <section className="service-offer">
         <div className="service-offer__media">
-          <Image src={copy.image} alt="" fill sizes="(max-width: 900px) 100vw, 50vw" />
+          <Image src={assetPath(copy.image)} alt="" fill sizes="(max-width: 900px) 100vw, 50vw" />
         </div>
         <div className="service-offer__content section-pad">
           <p className="section-label"><i /> {copy.number} / Get2Gear</p>
@@ -216,7 +217,7 @@ export default async function ServicePage({
 
       <footer className="site-footer" data-dark>
         <div className="shell site-footer__top">
-          <div className="site-footer__brand"><span className="site-footer__logo"><Image src="/images/get2gear-logo.png" alt="Get2Gear" width={300} height={110} /></span><p>{footer("tagline")}</p></div>
+          <div className="site-footer__brand"><span className="site-footer__logo"><Image src={assetPath("/images/get2gear-logo.png")} alt="Get2Gear" width={300} height={110} /></span><p>{footer("tagline")}</p></div>
           <div className="site-footer__contacts"><a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a><a href={`tel:${CONTACT_PHONE_HREF}`}>{CONTACT_PHONE}</a></div>
         </div>
         <div className="shell site-footer__bottom"><span>© {new Date().getFullYear()} Get2Gear. {footer("rights")}.</span><span>{footer("locations")}</span></div>
