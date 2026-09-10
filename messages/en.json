@@ -54,7 +54,7 @@
           "desc": "Design and implementation of process systems for safe, controlled and continuous operation.",
           "cta": "Discuss a challenge",
           "slug": "engineering",
-          "image": "/images/engineering-service.jpg"
+          "image": "/images/engineering-team.webp"
         },
         {
           "num": "02",
@@ -62,7 +62,7 @@
           "desc": "Selection, supply, installation and commissioning of industrial equipment and spare parts.",
           "cta": "Request supply",
           "slug": "equipment",
-          "image": "/images/equipment-service.jpg"
+          "image": "/images/equipment-team.webp"
         },
         {
           "num": "03",
@@ -70,7 +70,7 @@
           "desc": "Monitoring, data management and digital tools for production processes.",
           "cta": "Discuss a system",
           "slug": "automation",
-          "image": "/images/it-service.jpg"
+          "image": "/images/it-team.webp"
         }
       ]
     },
@@ -88,7 +88,7 @@
         "engineering": {
           "number":"01", "eyebrow":"Engineering", "title":"A production system begins with an exact engineering decision.",
           "lead":"We design and implement process and digital systems for mining operations — from solution architecture to site commissioning.",
-          "image":"/images/engineering-service.jpg", "imageAlt":"Get2Gear engineer at an industrial site",
+          "image":"/images/engineering-team.webp", "imageAlt":"Get2Gear engineer at an industrial site",
           "focus":[{"title":"Production automation","body":"Systems for cost accounting, process control and production-data management."},{"title":"Asset management","body":"Approaches to maintenance, repair and the management of fixed assets."},{"title":"Engineering data","body":"Enterprise data buses, digital archives and one coherent information environment."}],
           "detailLabel":"Engineering solutions", "detailTitle":"Digital environments for mining, service and production.",
           "detailItems":[{"title":"Dynamics AX for mining","body":"An ERP environment for managing the resources and processes of a mining operation."},{"title":"Maintenance management","body":"Tools for maintenance, repair and service operations."},{"title":"Data management","body":"A structure for engineering, production and enterprise information."},{"title":"Mining digitalisation","body":"Data and process tools for mining operations."},{"title":"Well service","body":"Digital solutions for engineering and service processes at wells."},{"title":"Oil and gas","body":"Digitalisation of oil and gas production processes."},{"title":"Archives and passports","body":"Electronic archives, catalogues and digital asset passports."},{"title":"Enterprise software","body":"Development, implementation and support of application software."}],
@@ -99,7 +99,7 @@
         "equipment": {
           "number":"02", "eyebrow":"Equipment", "title":"Equipment must suit not only the specification, but the operating duty.",
           "lead":"We select, supply and commission process and power equipment, components and spare parts for industrial operations.",
-          "image":"/images/equipment-service.jpg", "imageAlt":"Industrial equipment at a production site",
+          "image":"/images/equipment-team.webp", "imageAlt":"Industrial equipment at a production site",
           "focus":[{"title":"Solution selection","body":"We balance function, operating conditions, manufacturing time and technical constraints."},{"title":"Supply and start-up","body":"We coordinate delivery, site supervision and commissioning at the facility."},{"title":"Operation","body":"We help prepare personnel and organise critical consumables and spare parts."}],
           "detailLabel":"Equipment workflow", "detailTitle":"More than supply: preparation for dependable operation.",
           "detailItems":[{"title":"Process equipment","body":"Selection of equipment, pumps, components and spare parts around site conditions."},{"title":"Supply and commissioning","body":"Coordination of delivery, installation and putting the solution into operation."},{"title":"Site supervision","body":"Technical support for work at the customer’s facility."},{"title":"Personnel training","body":"Knowledge transfer to the team operating the solution."},{"title":"Customer warehouse","body":"Organisation of the customer’s consumables and spare-parts warehouse."},{"title":"Reconstruction","body":"Upgrading existing facilities and systems around their actual condition."}],
@@ -110,7 +110,7 @@
         "automation": {
           "number":"03", "eyebrow":"IT and automation", "title":"A digital system matters when its data improves decisions on the plant floor.",
           "lead":"We design and implement solutions for monitoring, control, data storage and the automation of industrial processes.",
-          "image":"/images/it-service.jpg", "imageAlt":"Get2Gear digital industrial system",
+          "image":"/images/it-team.webp", "imageAlt":"Get2Gear digital industrial system",
           "focus":[{"title":"Monitoring","body":"We bring process data together into a clear environment for control and operational analysis."},{"title":"Management","body":"We connect production, service and corporate processes into one working scenario."},{"title":"Data storage","body":"We establish a reliable structure for archives, catalogues and digital asset passports."}],
           "detailLabel":"IT products", "detailTitle":"Specific platforms for operational and enterprise environments.",
           "detailItems":[{"title":"Microsoft SharePoint","body":"Enterprise portals, collaboration and document management."},{"title":"Microsoft Dynamics CRM","body":"Customer-relationship and workflow management."},{"title":"Microsoft Dynamics AX","body":"An enterprise platform for resource management."},{"title":"Manufacturing Execution System (MES)","body":"Support for managing and executing manufacturing operations."},{"title":"MineSense","body":"A digital tool for mining-industry tasks."},{"title":"DATA ТЭК","body":"Work with energy-sector industry data."}],

@@ -165,7 +165,7 @@ export default async function HomePage({
 
         <div className="shell division-list">
           {divisions.map((division) => (
-            <article className="division-card" key={division.num} data-reveal>
+            <article className={`division-card division-card--${division.slug}`} key={division.num} data-reveal>
               <Image
                 src={assetPath(division.image)}
                 alt=""

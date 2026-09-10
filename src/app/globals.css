@@ -626,6 +626,18 @@ a {
     filter 500ms ease;
 }
 
+.division-card--engineering > img {
+  object-position: 32% center;
+}
+
+.division-card--equipment > img {
+  object-position: 40% center;
+}
+
+.division-card--automation > img {
+  object-position: 68% center;
+}
+
 .division-card:hover > img {
   filter: grayscale(0.15) contrast(1.02);
   transform: scale(1.055);
