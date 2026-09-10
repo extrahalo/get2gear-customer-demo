@@ -2,6 +2,7 @@ import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import SiteHeader from "@/components/SiteHeader";
+import StudioCredit from "@/components/StudioCredit";
 import ContactRequestForm from "@/components/ContactRequestForm";
 import VideoSlot from "@/components/VideoSlot";
 import {
@@ -542,6 +543,7 @@ export default async function HomePage({
         <div className="shell site-footer__bottom">
           <span>© {new Date().getFullYear()} Get2Gear. {t("footer.rights")}.</span>
           <span>{t("footer.locations")}</span>
+          <StudioCredit />
         </div>
       </footer>
     </main>

@@ -3,6 +3,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import SiteHeader from "@/components/SiteHeader";
+import StudioCredit from "@/components/StudioCredit";
 import { Link } from "@/i18n/navigation";
 import {
   CONTACT_EMAIL,
@@ -220,7 +221,7 @@ export default async function ServicePage({
           <div className="site-footer__brand"><span className="site-footer__logo"><Image src={assetPath("/images/get2gear-logo-horizontal.png")} alt="Get2Gear" width={1002} height={135} /></span><p>{footer("tagline")}</p></div>
           <div className="site-footer__contacts"><a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a><a href={`tel:${CONTACT_PHONE_HREF}`}>{CONTACT_PHONE}</a></div>
         </div>
-        <div className="shell site-footer__bottom"><span>© {new Date().getFullYear()} Get2Gear. {footer("rights")}.</span><span>{footer("locations")}</span></div>
+        <div className="shell site-footer__bottom"><span>© {new Date().getFullYear()} Get2Gear. {footer("rights")}.</span><span>{footer("locations")}</span><StudioCredit /></div>
       </footer>
     </main>
   );
