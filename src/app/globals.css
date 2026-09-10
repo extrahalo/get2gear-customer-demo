@@ -1365,15 +1365,16 @@ a {
 
 .site-footer__logo {
   display: grid;
-  width: 154px;
-  height: 94px;
+  width: 180px;
+  min-height: 48px;
+  flex-shrink: 0;
   place-items: center;
-  background: var(--white);
 }
 
 .site-footer__logo img {
-  width: 116px;
+  width: 100%;
   height: auto;
+  filter: brightness(0) invert(1);
 }
 
 .site-footer__brand p {
@@ -1425,10 +1426,11 @@ a {
 }
 
 .studio-credit img {
-  width: 27px;
-  height: 30px;
+  width: 110px;
+  height: auto;
   object-fit: contain;
-  filter: brightness(0) invert(1);
+  filter: invert(1);
+  mix-blend-mode: screen;
 }
 
 .studio-credit:hover,
@@ -3276,7 +3278,6 @@ a {
 
   .site-footer__logo {
     width: 132px;
-    height: 82px;
   }
 
   .service-hero__content {

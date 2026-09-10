@@ -2,7 +2,8 @@
 
 Published 2026-09-10 to https://get2gear.com/ru/ using the existing Plesk subscription.
 
-- Active document root: `get2gear-20260910`.
+- Active document root: `get2gear-20260910-footer` (footer logo update, 2026-09-10).
+- Previous static release retained in `get2gear-20260910` for rollback.
 - Previous WordPress files remain untouched in `httpdocs`; its database remains in place.
 - WordPress Toolkit backup: `wordpress-backups/get2gear.com__2026-09-10T15_53_07+0500.zip` (114.1 MB, creation confirmed by Plesk).
 - DNS and email settings were not changed. Existing TLS certificate retained; HTTP-to-HTTPS redirect enabled.
