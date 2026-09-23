@@ -280,15 +280,15 @@
       "email": "Send an email",
       "projectsEmail": "Project enquiries",
       "whatsapp": "Contact via WhatsApp",
-      "phoneLabel":"Phones", "locationsLabel":"Offices", "socialLabel":"Social",
-      "locations":["Almaty · Timiryazeva 15B, BC Yuzhny","Astana · Baraeva 14","Shymkent · Aiteke bi 153B"],
+      "phoneLabel":"Phones", "locationsLabel":"Address", "socialLabel":"Social",
+      "locations":["Office 14, 222 Baizakov Street, Almaty, Kazakhstan, A15M5X0"],
       "formLabel":"Brief enquiry", "formTitle":"Request the next step", "requestType":"What do you need", "name":"Your name", "phone":"Phone", "message":"Describe the challenge", "submit":"Prepare email", "submitted":"Opening your email application…",
       "options":[{"value":"documentation","label":"Technical documentation"},{"value":"proposal","label":"Commercial proposal"},{"value":"consultation","label":"Consultation"},{"value":"project","label":"Engineering or IT project"}]
     },
     "footer": {
       "tagline": "Engineering · Equipment · Contamination control",
       "rights": "All rights reserved",
-      "locations": "Almaty · Astana · Shymkent"
+      "locations": "Almaty, Kazakhstan"
     }
   }
 }

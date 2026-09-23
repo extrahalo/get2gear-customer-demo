@@ -21,7 +21,7 @@ export const CONTACT_PHONE_HREF = contacts.phone.replace(/[^+\d]/g, "");
 export const CONTACT_PHONE_ALT = contacts.phoneAlt;
 export const CONTACT_PHONE_ALT_HREF = contacts.phoneAlt.replace(/[^+\d]/g, "");
 export const WHATSAPP_HREF = contacts.whatsapp;
-export const WHATSAPP_PHONE = `+${contacts.whatsapp.split("/").pop()}`;
+export const WHATSAPP_PHONE = contacts.whatsapp ? `+${contacts.whatsapp.split("/").pop()}` : "";
 export const INSTAGRAM_HREF = contacts.instagram;
 
 export type Locale = "ru" | "kk" | "en";

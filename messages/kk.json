@@ -280,15 +280,15 @@
       "email": "Email жазу",
       "projectsEmail": "Жобалар бойынша",
       "whatsapp": "WhatsApp арқылы байланысу",
-      "phoneLabel":"Телефондар", "locationsLabel":"Кеңселер", "socialLabel":"Әлеуметтік желілер",
-      "locations":["Алматы · Тимирязев 15Б, «Южный» БО","Астана · Бараев 14","Шымкент · Әйтеке би 153Б"],
+      "phoneLabel":"Телефондар", "locationsLabel":"Мекенжай", "socialLabel":"Әлеуметтік желілер",
+      "locations":["A15M5X0, Қазақстан, Алматы · Байзақов көшесі, 222, 14-кеңсе"],
       "formLabel":"Қысқа бриф", "formTitle":"Келесі қадамды сұрау", "requestType":"Не қажет", "name":"Аты-жөніңіз", "phone":"Телефон", "message":"Міндетті сипаттаңыз", "submit":"Email дайындау", "submitted":"Пошта бағдарламасы ашылуда…",
       "options":[{"value":"documentation","label":"Техникалық құжаттама"},{"value":"proposal","label":"Коммерциялық ұсыныс"},{"value":"consultation","label":"Кеңес беру"},{"value":"project","label":"Инженерлік немесе IT-жоба"}]
     },
     "footer": {
       "tagline": "Инжиниринг · Жабдық · Ластануды бақылау",
       "rights": "Барлық құқықтар қорғалған",
-      "locations": "Алматы · Астана · Шымкент"
+      "locations": "Алматы, Қазақстан"
     }
   }
 }

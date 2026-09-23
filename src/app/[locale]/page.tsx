@@ -260,7 +260,7 @@ export default async function HomePage({
                 <strong>{PROJECTS_EMAIL}</strong>
                 <i aria-hidden="true">↗</i>
               </a>}
-              <a
+              {WHATSAPP_HREF && <a
                 className="contact-link"
                 href={WHATSAPP_HREF}
                 target="_blank"
@@ -269,11 +269,11 @@ export default async function HomePage({
                 <span>{contact.whatsapp}</span>
                 <strong>{WHATSAPP_PHONE}</strong>
                 <i aria-hidden="true">↗</i>
-              </a>
+              </a>}
             </div>
             <div className="contact-details" data-reveal>
-              <div><span>{contact.phoneLabel}</span><a href={`tel:${CONTACT_PHONE_HREF}`}>{CONTACT_PHONE}</a><a href={`tel:${CONTACT_PHONE_ALT_HREF}`}>{CONTACT_PHONE_ALT}</a></div>
-              <div><span>{contact.locationsLabel}</span>{contact.locations.map((location) => <p key={location}>{location}</p>)}</div>
+              {(CONTACT_PHONE || CONTACT_PHONE_ALT) && <div><span>{contact.phoneLabel}</span>{CONTACT_PHONE && <a href={`tel:${CONTACT_PHONE_HREF}`}>{CONTACT_PHONE}</a>}{CONTACT_PHONE_ALT && <a href={`tel:${CONTACT_PHONE_ALT_HREF}`}>{CONTACT_PHONE_ALT}</a>}</div>}
+              <div><span>{contact.locationsLabel}</span>{contact.locations.filter(Boolean).map((location) => <p key={location}>{location}</p>)}</div>
               <div><span>{contact.socialLabel}</span><a href={INSTAGRAM_HREF} target="_blank" rel="noreferrer">Instagram ↗</a></div>
             </div>
             <ContactRequestForm email={CONTACT_EMAIL} copy={contact} />

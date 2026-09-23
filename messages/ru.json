@@ -280,15 +280,15 @@
       "email": "Написать на email",
       "projectsEmail": "По проектам",
       "whatsapp": "Связаться в WhatsApp",
-      "phoneLabel":"Телефоны", "locationsLabel":"Офисы", "socialLabel":"Социальные сети",
-      "locations":["Алматы · Тимирязева 15Б, БЦ «Южный»","Астана · Бараева 14","Шымкент · Айтеке би 153Б"],
+      "phoneLabel":"Телефоны", "locationsLabel":"Адрес", "socialLabel":"Социальные сети",
+      "locations":["A15M5X0, Казахстан, Алматы · ул. Байзакова, 222, офис 14"],
       "formLabel":"Короткий бриф", "formTitle":"Запросить следующий шаг", "requestType":"Что требуется", "name":"Ваше имя", "phone":"Телефон", "message":"Опишите задачу", "submit":"Подготовить письмо", "submitted":"Открываем вашу почтовую программу…",
       "options":[{"value":"documentation","label":"Техническая документация"},{"value":"proposal","label":"Коммерческое предложение"},{"value":"consultation","label":"Консультация"},{"value":"project","label":"Инженерный или IT-проект"}]
     },
     "footer": {
       "tagline": "Инжиниринг · Оборудование · Контроль загрязнений",
       "rights": "Все права защищены",
-      "locations": "Алматы · Астана · Шымкент"
+      "locations": "Алматы, Казахстан"
     }
   }
 }

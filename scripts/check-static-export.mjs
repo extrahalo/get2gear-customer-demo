@@ -18,10 +18,14 @@ for (const route of pages) {
   const html = await read(path.join(out, route, 'index.html'));
   assert.equal((html.match(/<h1(?:\s|>)/g) || []).length, 1, `${route}: heading`);
   for (const email of [contacts.email, contacts.projectsEmail].filter(Boolean)) assert.ok(html.includes(`href="mailto:${email}"`), `${route}: ${email}`);
-  assert.ok(html.includes(`href="tel:${contacts.phone.replace(/[^+\d]/g, '')}"`), `${route}: phone`);
+  if (contacts.phone) assert.ok(html.includes(`href="tel:${contacts.phone.replace(/[^+\d]/g, '')}"`), `${route}: phone`);
+  if (!contacts.phone && !contacts.phoneAlt) assert.ok(!html.includes('href="tel:'), `${route}: no retired phones`);
+  if (!contacts.whatsapp) assert.ok(!html.includes('https://wa.me/'), `${route}: no retired WhatsApp`);
+  assert.ok(!/Тимирязев|Timiryazev|Бараева|Бараев 14|Baraeva|Айтеке би 153|Әйтеке би 153|Aiteke bi 153|77273132527|77073241009|77710616148/.test(html), `${route}: no retired contacts`);
   if (route.split('/').length === 2) {
-    assert.ok(html.includes(`href="tel:${contacts.phoneAlt.replace(/[^+\d]/g, '')}"`), `${route}: alternate phone`);
-    assert.ok(html.includes(`href="${contacts.whatsapp}"`), `${route}: WhatsApp`);
+    if (contacts.phoneAlt) assert.ok(html.includes(`href="tel:${contacts.phoneAlt.replace(/[^+\d]/g, '')}"`), `${route}: alternate phone`);
+    if (contacts.whatsapp) assert.ok(html.includes(`href="${contacts.whatsapp}"`), `${route}: WhatsApp`);
+    assert.ok(html.includes('A15M5X0'), `${route}: new Almaty address`);
     assert.ok(html.includes(`href="${contacts.instagram}"`), `${route}: Instagram`);
     assert.ok(!html.includes('id="solutions"') && !html.includes('id="products"'), `${route}: Des-Case stays separate`);
   }
