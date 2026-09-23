@@ -76,7 +76,7 @@ html.menu-open {
 
 body {
   margin: 0;
-  min-width: 320px;
+  min-width: 0;
   overflow-x: clip;
   background: var(--paper);
   font-family: var(--font-body), sans-serif;
@@ -3417,6 +3417,7 @@ section[id] { scroll-margin-top: 12px; }
 }
 @media (max-width: 640px) {
   html { scroll-padding-top: 88px; }
+  .contact-panel h2 { font-size: clamp(2.75rem, 11vw, 4rem); line-height: .94; }
   .service-hero__copy h1 { font-size: clamp(2.5rem, 10.5vw, 4rem); line-height: .98; }
   .service-route nav, .service-details__list, .policies__list { grid-template-columns: minmax(0, 1fr); }
   .service-hero { min-height: 660px; }
