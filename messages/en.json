@@ -9,12 +9,14 @@
     "menu": "Open menu",
     "close": "Close menu",
     "nav": {
+      "descase": "Des-Case",
       "directions": "Disciplines",
       "about": "Company",
       "solutions": "Solutions",
       "products": "Products",
       "results": "Experience",
       "videos": "Videos",
+      "news": "News",
       "contacts": "Contacts"
     },
     "serviceLabel": "Get2Gear disciplines",
@@ -26,12 +28,26 @@
     "request": "Discuss a project"
   },
   "home": {
+    "descase": {
+      "teaserTitle": "Contamination control by Des-Case and RMF",
+      "teaserBody": "Reservoir protection, filtration and oil monitoring are one part of Get2Gear’s work. Explore the products, solutions and practical experience in a dedicated section.",
+      "cta": "Explore Des-Case",
+      "pageTitle": "Des-Case and RMF — contamination control",
+      "back": "Back to home",
+      "solutionNav": "Solutions",
+      "generalVideoLabel": "Get2Gear films",
+      "generalVideoTitle": "Our company and the industries we serve.",
+      "generalVideoNote": "Short stories about our team and industrial challenges. Product films are available in the Des-Case section.",
+      "productVideoLabel": "Technology films",
+      "productVideoTitle": "Contamination control in detail.",
+      "productVideoNote": "Short films covering products, implementation and the economics of reliability."
+    },
     "hero": {
       "eyebrow": "Engineering · Supply · Contamination control",
       "title": "Industry moves when everything works together.",
       "lead": "We engineer, supply and implement equipment and digital solutions for industrial enterprises across Kazakhstan and the CIS.",
       "primary": "Discuss a project",
-      "secondary": "Flagship solution",
+      "secondary": "Our capabilities",
       "sector": "Mining industry",
       "sectorLabel": "Sector",
       "region": "Kazakhstan · CIS",
@@ -262,6 +278,7 @@
       "title": "Tell us what needs to work better.",
       "body": "Equipment, contamination control, automation or an integrated engineering challenge — let us start with a short conversation.",
       "email": "Send an email",
+      "projectsEmail": "Project enquiries",
       "whatsapp": "Contact via WhatsApp",
       "phoneLabel":"Phones", "locationsLabel":"Offices", "socialLabel":"Social",
       "locations":["Almaty · Timiryazeva 15B, BC Yuzhny","Astana · Baraeva 14","Shymkent · Aiteke bi 153B"],

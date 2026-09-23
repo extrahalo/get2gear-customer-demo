@@ -1,12 +1,13 @@
 import type { MetadataRoute } from "next";
 import { routing } from "@/i18n/routing";
 import { SITE_URL } from "@/lib/site";
+import { news } from "@/lib/news";
 
 // GitHub Pages is a static host, so this route must be generated at build time.
 export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const services = ["engineering", "equipment", "automation"];
+  const services = ["engineering", "equipment", "automation", "descase"];
   const localized = (path = "") => routing.locales.map((locale) => ({
     url: `${SITE_URL}/${locale}${path}`,
     lastModified: new Date(),
@@ -20,5 +21,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     ...localized(),
     ...services.flatMap((service) => localized(`/${service}`)),
+    ...localized("/news/"),
+    ...news.flatMap((item) => localized(`/news/${item.slug}/`).map(entry => ({ ...entry, lastModified: new Date(`${item.date}T12:00:00Z`) }))),
   ];
 }

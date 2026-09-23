@@ -12,7 +12,8 @@ export default function Experience({ children }: { children: React.ReactNode }) 
 
     gsap.registerPlugin(ScrollTrigger);
     const lenis = new Lenis({
-      anchors: { offset: -96 },
+      // Lenis already honors CSS scroll-padding and the target's scroll-margin.
+      anchors: true,
       duration: 1.05,
       smoothWheel: true,
     });

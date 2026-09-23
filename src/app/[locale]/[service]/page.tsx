@@ -4,11 +4,11 @@ import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import SiteHeader from "@/components/SiteHeader";
 import StudioCredit from "@/components/StudioCredit";
+import FooterContacts from "@/components/FooterContacts";
+import CompanyApproach from "@/components/CompanyApproach";
 import { Link } from "@/i18n/navigation";
 import {
   CONTACT_EMAIL,
-  CONTACT_PHONE,
-  CONTACT_PHONE_HREF,
   assetPath,
   SITE_URL,
 } from "@/lib/site";
@@ -203,6 +203,8 @@ export default async function ServicePage({
         </div>
       </section>
 
+      {service === "engineering" ? <CompanyApproach locale={locale} /> : null}
+
       <section className="service-contact section-pad" data-dark>
         <div className="shell service-contact__grid">
           <p className="section-label section-label--light"><i /> {t("ctaLabel")}</p>
@@ -219,7 +221,7 @@ export default async function ServicePage({
       <footer className="site-footer" data-dark>
         <div className="shell site-footer__top">
           <div className="site-footer__brand"><span className="site-footer__logo"><Image src={assetPath("/images/get2gear-logo-horizontal.png")} alt="Get2Gear" width={1002} height={135} /></span><p>{footer("tagline")}</p></div>
-          <div className="site-footer__contacts"><a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a><a href={`tel:${CONTACT_PHONE_HREF}`}>{CONTACT_PHONE}</a></div>
+          <FooterContacts />
         </div>
         <div className="shell site-footer__bottom"><span>© {new Date().getFullYear()} Get2Gear. {footer("rights")}.</span><span>{footer("locations")}</span><StudioCredit /></div>
       </footer>

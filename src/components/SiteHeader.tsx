@@ -7,14 +7,14 @@ import { Link } from "@/i18n/navigation";
 import LocaleSwitcher from "@/components/LocaleSwitcher";
 import { assetPath, CONTACT_EMAIL } from "@/lib/site";
 
-const NAV_ITEMS = ["directions", "about", "solutions", "products", "results", "videos", "contacts"] as const;
+const NAV_ITEMS = ["directions", "about", "descase", "videos", "news", "contacts"] as const;
 const SERVICE_ITEMS = ["engineering", "equipment", "automation"] as const;
 
 export default function SiteHeader() {
   const t = useTranslations("header");
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const hrefFor = (item: (typeof NAV_ITEMS)[number]) => item === "directions" ? "/#divisions" : `/#${item}`;
+  const hrefFor = (item: (typeof NAV_ITEMS)[number]) => item === "news" ? "/news" : item === "descase" ? "/descase" : item === "directions" ? "/#divisions" : `/#${item}`;
 
   useEffect(() => {
     const update = () => setScrolled(window.scrollY > 48);

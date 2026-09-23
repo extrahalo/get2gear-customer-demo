@@ -38,7 +38,10 @@ jobs:
         run: npm run lint
 
       - name: Build static customer demo
-        run: npm run build
+        run: |
+          npm run build -- --webpack
+          node scripts/finalize-static-export.mjs
+          node scripts/check-static-export.mjs
         env:
           PAGES_BASE_PATH: ${{ steps.pages.outputs.base_path }}
           NEXT_PUBLIC_BASE_PATH: ${{ steps.pages.outputs.base_path }}
