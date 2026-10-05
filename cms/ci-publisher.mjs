@@ -44,7 +44,7 @@ async function run(args, cwd) {
   });
 }
 
-async function inspect(out, snapshot) {
+async function inspect(out, snapshot, videoFiles) {
   const escape = v => v.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;').replaceAll("'", '&#x27;');
   const routes = locales.flatMap(locale => ['', 'engineering', 'equipment', 'automation', 'descase', 'videos', 'news',
     ...snapshot.data.news.map(n => `news/${n.slug}`)].map(route => `${locale}/${route ? `${route}/` : ''}`));
@@ -60,7 +60,11 @@ async function inspect(out, snapshot) {
       const url = new URL(match[2].replaceAll('&amp;', '&'), `https://get2gear.com/${route}`);
       if (url.origin !== 'https://get2gear.com') continue;
       const file = path.resolve(out, `.${decodeURIComponent(url.pathname)}`);
-      assert.ok(file.startsWith(`${out}/`));
+      assert.ok(file === out || file.startsWith(`${out}/`));
+      if (url.pathname.startsWith('/videos/') && url.pathname.endsWith('.mp4')) {
+        assert.ok(videoFiles.some(record => `/${record.path}` === url.pathname), 'Only approved hosted video assets may be reused');
+        continue;
+      }
       const stat = await fs.stat(file);
       const target = stat.isDirectory() ? path.join(file, 'index.html') : file;
       await fs.access(target);
@@ -123,7 +127,12 @@ async function publish(job) {
     await run([path.join(root, 'node_modules/next/dist/bin/next'), 'build', '--webpack'], stage);
     await run([path.join(root, 'scripts/finalize-static-export.mjs')], stage);
     const out = path.join(stage, 'out');
-    const routeCount = await inspect(out, snapshot);
+    for (const record of videoFiles.filter(f => f.path.endsWith('.mp4'))) {
+      const response = await fetch(`https://get2gear.com/${record.path}`, {method: 'HEAD', redirect: 'error', signal: AbortSignal.timeout(60000)});
+      assert.equal(response.status, 200, 'Reused video must remain accessible');
+      assert.equal(Number(response.headers.get('content-length')), record.bytes, 'Reused video size mismatch');
+    }
+    const routeCount = await inspect(out, snapshot, videoFiles);
     const files = {};
     async function collect(directory) {
       for (const item of await fs.readdir(directory, {withFileTypes: true})) {
