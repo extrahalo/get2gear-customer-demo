@@ -1,0 +1,47 @@
+name: Publish CMS content to PS.kz
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '2-57/5 * * * *'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: get2gear-ps-production
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Check out approved production code
+        uses: actions/checkout@v4
+        with:
+          ref: codex/cms-production
+          persist-credentials: false
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Check for queued release
+        id: queue
+        run: node cms/ci-publisher.mjs --claim
+        env:
+          JEL_PUBLISH_ENDPOINT: ${{ secrets.JEL_PUBLISH_ENDPOINT }}
+          JEL_PUBLISH_KEY: ${{ secrets.JEL_PUBLISH_KEY }}
+      - name: Install dependencies without publisher credential
+        if: steps.queue.outputs.has_job == 'true'
+        run: npm ci
+      - name: Validate snapshot adapter
+        if: steps.queue.outputs.has_job == 'true'
+        run: node --test cms/tests/adapter.test.mjs
+      - name: Build and publish queued content
+        if: steps.queue.outputs.has_job == 'true'
+        run: GITHUB_SHA="$(git rev-parse HEAD)" node cms/ci-publisher.mjs --run
+        env:
+          JEL_PUBLISH_ENDPOINT: ${{ secrets.JEL_PUBLISH_ENDPOINT }}
+          JEL_PUBLISH_KEY: ${{ secrets.JEL_PUBLISH_KEY }}
