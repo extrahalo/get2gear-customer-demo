@@ -6,12 +6,14 @@ import { promises as fs } from 'node:fs';
 import path from 'node:path';
 import { spawn, execFileSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
+import { setDefaultResultOrder } from 'node:dns';
 import { applySnapshot, locales, validateSnapshot, verifyMedia } from './adapter.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const endpoint = process.env.JEL_PUBLISH_ENDPOINT;
 const key = process.env.JEL_PUBLISH_KEY;
 const sha = bytes => createHash('sha256').update(bytes).digest('hex');
+setDefaultResultOrder('ipv4first');
 assert.ok(endpoint?.startsWith('https://cms.get2gear.com/') || (process.env.JEL_WORKER_TEST === '1' && endpoint?.startsWith('http://127.0.0.1:')), 'Configured endpoint required');
 assert.match(key ?? '', /^[a-f0-9]{64}$/);
 
@@ -24,6 +26,18 @@ async function request(payload, binary = false) {
     headers: {'Content-Type': 'application/json', 'X-Jel-Time': time, 'X-Jel-Nonce': nonce, 'X-Jel-Signature': signature}, body});
   if (!response.ok) throw new Error(`Publisher request failed (${response.status}, action ${payload.action})`);
   return binary ? Buffer.from(await response.arrayBuffer()) : response.json();
+}
+
+async function publicAsset(url, options = {}) {
+  for (let attempt = 0; attempt < 3; attempt++) {
+    try {
+      const response = await fetch(url, {...options, redirect: 'error', signal: AbortSignal.timeout(90000)});
+      if (response.status < 500 && response.status !== 429) return response;
+      await response.body?.cancel();
+      if (attempt === 2) throw new Error('Public website temporarily unavailable');
+    } catch (error) { if (attempt === 2) throw error; }
+    await new Promise(resolve => setTimeout(resolve, (attempt + 1) * 2000));
+  }
 }
 
 async function run(args, cwd) {
@@ -119,7 +133,7 @@ async function publish(job) {
     const videoFiles = JSON.parse(await fs.readFile(path.join(root, 'cms/production/video-files.json'), 'utf8'));
     for (const record of videoFiles.filter(f => !f.path.endsWith('.mp4'))) {
       assert.match(record.path, /^videos\/[a-zA-Z0-9_/-]+\.(?:jpg|png|webp)$/);
-      const response = await fetch(`https://get2gear.com/${record.path}`, {redirect: 'error', signal: AbortSignal.timeout(60000)});
+      const response = await publicAsset(`https://get2gear.com/${record.path}`);
       assert.equal(response.status, 200);
       const bytes = Buffer.from(await response.arrayBuffer()); assert.equal(sha(bytes), record.sha256);
       const file = path.join(stage, 'public', record.path); await fs.mkdir(path.dirname(file), {recursive: true}); await fs.writeFile(file, bytes);
@@ -128,7 +142,7 @@ async function publish(job) {
     await run([path.join(root, 'scripts/finalize-static-export.mjs')], stage);
     const out = path.join(stage, 'out');
     for (const record of videoFiles.filter(f => f.path.endsWith('.mp4'))) {
-      const response = await fetch(`https://get2gear.com/${record.path}`, {method: 'HEAD', redirect: 'error', signal: AbortSignal.timeout(60000)});
+      const response = await publicAsset(`https://get2gear.com/${record.path}`, {method: 'HEAD'});
       assert.equal(response.status, 200, 'Reused video must remain accessible');
       assert.equal(Number(response.headers.get('content-length')), record.bytes, 'Reused video size mismatch');
     }
@@ -165,7 +179,7 @@ async function publish(job) {
     // Verify actual live HTML, not just callback success. IDs/logs contain no content.
     for (const locale of locales) {
       const expected = await fs.readFile(path.join(out, locale, 'index.html'));
-      const response = await fetch(`https://get2gear.com/${locale}/?release=${job.id}`, {signal: AbortSignal.timeout(60000), redirect: 'error'});
+      const response = await publicAsset(`https://get2gear.com/${locale}/?release=${job.id}`);
       assert.equal(response.status, 200); assert.equal(sha(Buffer.from(await response.arrayBuffer())), sha(expected), 'Live HTML differs from release');
     }
     const published = await request({action: 'confirm', ...identity});
@@ -187,6 +201,10 @@ if (process.argv.includes('--claim')) {
 } else if (process.argv.includes('--run')) {
   await publish(JSON.parse(await fs.readFile(jobFile, 'utf8')));
 } else if (process.argv.includes('--probe')) console.log(JSON.stringify(await request({action: 'probe'})));
+else if (process.argv.includes('--enqueue-only')) {
+  const release = await request({action: 'enqueue'});
+  console.log(`Queued ${release.id}; content remains private.`);
+}
 else {
   if (process.argv.includes('--enqueue')) await request({action: 'enqueue'});
   const {job} = await request({action: 'claim'});
