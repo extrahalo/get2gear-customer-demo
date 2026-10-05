@@ -179,6 +179,7 @@ async function publish(job) {
 
 const jobFile = path.join(process.env.RUNNER_TEMP || path.join(root, 'tmp'), 'jel-publish-job.json');
 if (process.argv.includes('--claim')) {
+  if (process.argv.includes('--enqueue')) await request({action: 'enqueue'});
   const {job} = await request({action: 'claim'});
   if (job) await fs.writeFile(jobFile, JSON.stringify(job), {mode: 0o600});
   if (process.env.GITHUB_OUTPUT) await fs.appendFile(process.env.GITHUB_OUTPUT, `has_job=${job ? 'true' : 'false'}\n`);
