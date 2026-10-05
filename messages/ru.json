@@ -210,26 +210,33 @@
       ]
     },
     "videos": {
-      "label": "Семь историй",
-      "title": "Семь историй о промышленной надежности.",
-      "note": "Компания, технологии, продукты, практический кейс, экономика и отрасли собраны в единую серию коротких видео.",
+      "label": "Видеотека / 10 видео",
+      "title": "Все видео Get2Gear — в одном месте.",
+      "note": "Семь коротких историй о компании и технологиях и три демонстрации оборудования. Выберите видео из списка, чтобы смотреть его со звуком.",
       "status": "Get2Gear / Видео",
       "statusShort": "Видео",
-      "duration": "30–60 сек",
+      "watch": "Смотреть видео",
+      "duration": "60 сек",
       "placements": {
         "profile": "О компании",
         "solution": "Контроль загрязнений",
         "products": "Продуктовая система",
         "results": "Кейс и результаты",
         "economics": "Экономика решения",
-        "industries": "Отрасли"
+        "industries": "Отрасли",
+        "demonstration": "Демонстрация оборудования"
+      },
+      "demonstrations": {
+        "rmf-demonstration": { "title": "Демонстрация автономной фильтрации RMF", "summary": "Видео производителя с английской речью и контактами Get2Gear в финале." },
+        "descase-breather": { "title": "Des-Case: сапун", "summary": "Русская озвучка и субтитры. Принцип работы сапуна Des-Case." },
+        "descase-oil-analysis": { "title": "Des-Case: визуальный контроль масла", "summary": "Русская озвучка и субтитры. Отдельная демонстрация контроля масла." }
       },
       "items": {
         "company": { "title": "Get2Gear: профиль компании", "summary": "Короткое знакомство с командой, подходом и географией работы." },
         "contamination": { "title": "Почему чистота масла критична", "summary": "Наглядная история о частицах, влаге и коде чистоты ISO 4406." },
         "breathers": { "title": "Сапуны Des-Case", "summary": "Принцип работы, подбор и тяжелые серии DC-RS и DC-XD." },
         "filtration": { "title": "Байпасная фильтрация RMF", "summary": "Как автономный контур очищает рабочую жидкость без остановки машины." },
-        "case": { "title": "Кейс горнодобывающей площадки", "summary": "Путь от выявленной проблемы до внедренной системы контроля загрязнений." },
+        "case": { "title": "Типовой пример для карьера", "summary": "Защита резервуаров, фильтрация и контроль пробы на примере карьерной эксплуатации." },
         "economics": { "title": "Экономика грязного масла", "summary": "Простой, ресурс узлов и логика расчета возврата инвестиций." },
         "industries": { "title": "Отрасли и условия эксплуатации", "summary": "Горная добыча, нефть и газ, EPC и тяжелые промышленные режимы." }
       }
@@ -261,7 +268,20 @@
       "label": "Портфель производителей",
       "title": "Оборудование мировых брендов",
       "note": "Подбираем оборудование и компоненты под технические требования, условия эксплуатации и задачи конкретного предприятия.",
-      "items": ["DES-CASE", "RMF SYSTEMS", "ABB", "Flowserve", "Siemens", "Grundfos", "Alfa Laval", "Phoenix Contact", "Pepperl+Fuchs"]
+      "items": [
+        { "name": "Metso", "logo": "/images/brands/metso-client.png" },
+        { "name": "MECS", "logo": "/images/brands/elessent-client.png", "caption": "MECS® TECHNOLOGIES" },
+        { "name": "Beaver Technology Services", "logo": "/images/brands/beaver-technology-services.png", "caption": "BEAVER TECHNOLOGY SERVICES" },
+        { "name": "DES-CASE", "logo": "/images/brands/des-case.png" },
+        { "name": "RMF SYSTEMS", "logo": "/images/brands/rmf-systems.png" },
+        { "name": "ABB", "logo": "/images/brands/abb.svg" },
+        { "name": "Flowserve", "logo": "/images/brands/flowserve.svg" },
+        { "name": "Siemens", "logo": "/images/brands/siemens.svg" },
+        { "name": "Grundfos", "logo": "/images/brands/grundfos.jpg" },
+        { "name": "Alfa Laval", "logo": "/images/brands/alfa-laval.svg" },
+        { "name": "Phoenix Contact", "logo": "/images/brands/phoenix-contact.svg" },
+        { "name": "Pepperl+Fuchs", "logo": "/images/brands/pepperl-fuchs.svg" }
+      ]
     },
     "news": {
       "label": "Новости и экспертиза",

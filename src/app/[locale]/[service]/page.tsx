@@ -58,18 +58,19 @@ export async function generateMetadata({
     title: `${copy.eyebrow} | Get2Gear`,
     description: copy.lead,
     alternates: {
-      canonical: `/${locale}/${service}`,
+      canonical: `/${locale}/${service}/`,
       languages: {
-        ru: `/ru/${service}`,
-        kk: `/kk/${service}`,
-        en: `/en/${service}`,
+        ru: `/ru/${service}/`,
+        kk: `/kk/${service}/`,
+        en: `/en/${service}/`,
+        "x-default": `/ru/${service}/`,
       },
     },
     openGraph: {
       title: `${copy.eyebrow} | Get2Gear`,
       description: copy.lead,
       type: "website",
-      url: `${SITE_URL}/${locale}/${service}`,
+      url: `${SITE_URL}/${locale}/${service}/`,
       images: [{ url: copy.image, alt: copy.imageAlt }],
     },
   };

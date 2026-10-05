@@ -210,26 +210,33 @@
       ]
     },
     "videos": {
-      "label": "Seven stories",
-      "title": "Seven stories about industrial reliability.",
-      "note": "Company, technology, products, field experience, economics and industries form one concise video series.",
+      "label": "Video library / 10 films",
+      "title": "Every Get2Gear video, in one place.",
+      "note": "Seven short stories about the company and its technology, plus three equipment demonstrations. Choose a video from the list to watch with sound.",
       "status": "Get2Gear / Film",
       "statusShort": "Film",
-      "duration": "30–60 sec",
+      "watch": "Watch video",
+      "duration": "60 sec",
       "placements": {
         "profile": "Company profile",
         "solution": "Contamination control",
         "products": "Product system",
         "results": "Case and outcomes",
         "economics": "Solution economics",
-        "industries": "Industries"
+        "industries": "Industries",
+        "demonstration": "Equipment demonstration"
+      },
+      "demonstrations": {
+        "rmf-demonstration": { "title": "RMF off-line filtration demonstration", "summary": "Manufacturer film with English narration and Get2Gear contact details in Russian at the end." },
+        "descase-breather": { "title": "Des-Case: breather", "summary": "Russian narration and subtitles; an English-dubbed version is not available." },
+        "descase-oil-analysis": { "title": "Des-Case: visual oil analysis", "summary": "Russian narration and subtitles; an English-dubbed version is not available." }
       },
       "items": {
         "company": { "title": "Get2Gear: company profile", "summary": "A concise introduction to the team, approach and operating geography." },
         "contamination": { "title": "Why oil cleanliness matters", "summary": "A visual explanation of particles, moisture and ISO 4406 cleanliness codes." },
         "breathers": { "title": "Des-Case breathers", "summary": "Operating principle, selection logic and severe-duty DC-RS and DC-XD series." },
         "filtration": { "title": "RMF bypass filtration", "summary": "How an offline circuit cleans fluid without stopping the machine." },
-        "case": { "title": "Mining-site case study", "summary": "From the identified risk to an implemented contamination-control system." },
+        "case": { "title": "Illustrative mining application", "summary": "Reservoir protection, filtration and oil sampling in an illustrative mining scenario." },
         "economics": { "title": "The economics of dirty oil", "summary": "Downtime, component life and the logic behind an investment assessment." },
         "industries": { "title": "Industries and operating conditions", "summary": "Mining, oil and gas, EPC and severe industrial duty." }
       }
@@ -261,7 +268,20 @@
       "label": "Manufacturer portfolio",
       "title": "Equipment from global brands",
       "note": "Equipment and components are selected around the technical requirements, operating conditions and objectives of each facility.",
-      "items": ["DES-CASE", "RMF SYSTEMS", "ABB", "Flowserve", "Siemens", "Grundfos", "Alfa Laval", "Phoenix Contact", "Pepperl+Fuchs"]
+      "items": [
+        { "name": "Metso", "logo": "/images/brands/metso-client.png" },
+        { "name": "MECS", "logo": "/images/brands/elessent-client.png", "caption": "MECS® TECHNOLOGIES" },
+        { "name": "Beaver Technology Services", "logo": "/images/brands/beaver-technology-services.png", "caption": "BEAVER TECHNOLOGY SERVICES" },
+        { "name": "DES-CASE", "logo": "/images/brands/des-case.png" },
+        { "name": "RMF SYSTEMS", "logo": "/images/brands/rmf-systems.png" },
+        { "name": "ABB", "logo": "/images/brands/abb.svg" },
+        { "name": "Flowserve", "logo": "/images/brands/flowserve.svg" },
+        { "name": "Siemens", "logo": "/images/brands/siemens.svg" },
+        { "name": "Grundfos", "logo": "/images/brands/grundfos.jpg" },
+        { "name": "Alfa Laval", "logo": "/images/brands/alfa-laval.svg" },
+        { "name": "Phoenix Contact", "logo": "/images/brands/phoenix-contact.svg" },
+        { "name": "Pepperl+Fuchs", "logo": "/images/brands/pepperl-fuchs.svg" }
+      ]
     },
     "news": {
       "label": "News and expertise",

@@ -210,26 +210,33 @@
       ]
     },
     "videos": {
-      "label": "Жеті оқиға",
-      "title": "Өнеркәсіптік сенімділік туралы жеті оқиға.",
-      "note": "Компания, технологиялар, өнімдер, тәжірибе, экономика және салалар біртұтас қысқа видео сериясына біріктірілген.",
+      "label": "Бейнежинақ / 10 бейне",
+      "title": "Get2Gear бейнелерінің бәрі бір жерде.",
+      "note": "Компания мен технологиялар туралы жеті қысқа бейне және жабдықтың үш көрсетілімі. Дыбыспен көру үшін тізімнен бейнені таңдаңыз. Қазақша дубляж әзірге жоқ.",
       "status": "Get2Gear / Видео",
       "statusShort": "Видео",
-      "duration": "30–60 сек",
+      "watch": "Бейнені көру",
+      "duration": "60 сек",
       "placements": {
         "profile": "Компания туралы",
         "solution": "Ластануды бақылау",
         "products": "Өнімдік жүйе",
         "results": "Кейс және нәтиже",
         "economics": "Шешім экономикасы",
-        "industries": "Салалар"
+        "industries": "Салалар",
+        "demonstration": "Жабдық көрсетілімі"
+      },
+      "demonstrations": {
+        "rmf-demonstration": { "title": "RMF автономды сүзгілеу жүйесінің көрсетілімі", "summary": "Өндірушінің ағылшын тіліндегі бейнесі; соңында Get2Gear байланыс деректері орысша берілген." },
+        "descase-breather": { "title": "Des-Case: сапун", "summary": "Орысша дыбыстау және субтитрлер. Сапун жұмысының жеке көрсетілімі." },
+        "descase-oil-analysis": { "title": "Des-Case: майды визуалды бақылау", "summary": "Орысша дыбыстау және субтитрлер. Майды тексерудің жеке көрсетілімі." }
       },
       "items": {
         "company": { "title": "Get2Gear: компания профилі", "summary": "Команда, жұмыс тәсілі және географиясы туралы қысқаша таныстыру." },
         "contamination": { "title": "Май тазалығы неге маңызды", "summary": "Бөлшектер, ылғал және ISO 4406 тазалық коды туралы көрнекі түсініктеме." },
         "breathers": { "title": "Des-Case сапундары", "summary": "Жұмыс принципі, таңдау логикасы және ауыр режимдегі DC-RS пен DC-XD сериялары." },
         "filtration": { "title": "RMF байпас сүзуі", "summary": "Автономды контур машинаны тоқтатпай сұйықтықты қалай тазалайтыны туралы." },
-        "case": { "title": "Тау-кен алаңының кейсі", "summary": "Анықталған тәуекелден енгізілген ластануды бақылау жүйесіне дейін." },
+        "case": { "title": "Карьерге арналған типтік мысал", "summary": "Карьер жағдайындағы резервуарды қорғау, сүзу және май сынамасын бақылау." },
         "economics": { "title": "Ластанған май экономикасы", "summary": "Тоқтап қалу, торап ресурсы және инвестицияны бағалау логикасы." },
         "industries": { "title": "Салалар және жұмыс жағдайлары", "summary": "Тау-кен өндірісі, мұнай-газ, EPC және ауыр өнеркәсіптік режимдер." }
       }
@@ -261,7 +268,20 @@
       "label": "Өндірушілер портфелі",
       "title": "Әлемдік брендтердің жабдықтары",
       "note": "Жабдықтар мен компоненттер әр кәсіпорынның техникалық талаптарына, пайдалану жағдайларына және міндеттеріне сай таңдалады.",
-      "items": ["DES-CASE", "RMF SYSTEMS", "ABB", "Flowserve", "Siemens", "Grundfos", "Alfa Laval", "Phoenix Contact", "Pepperl+Fuchs"]
+      "items": [
+        { "name": "Metso", "logo": "/images/brands/metso-client.png" },
+        { "name": "MECS", "logo": "/images/brands/elessent-client.png", "caption": "MECS® TECHNOLOGIES" },
+        { "name": "Beaver Technology Services", "logo": "/images/brands/beaver-technology-services.png", "caption": "BEAVER TECHNOLOGY SERVICES" },
+        { "name": "DES-CASE", "logo": "/images/brands/des-case.png" },
+        { "name": "RMF SYSTEMS", "logo": "/images/brands/rmf-systems.png" },
+        { "name": "ABB", "logo": "/images/brands/abb.svg" },
+        { "name": "Flowserve", "logo": "/images/brands/flowserve.svg" },
+        { "name": "Siemens", "logo": "/images/brands/siemens.svg" },
+        { "name": "Grundfos", "logo": "/images/brands/grundfos.jpg" },
+        { "name": "Alfa Laval", "logo": "/images/brands/alfa-laval.svg" },
+        { "name": "Phoenix Contact", "logo": "/images/brands/phoenix-contact.svg" },
+        { "name": "Pepperl+Fuchs", "logo": "/images/brands/pepperl-fuchs.svg" }
+      ]
     },
     "news": {
       "label": "Жаңалықтар және сараптама",

@@ -7,7 +7,13 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "cms:setup": "node cms/setup.mjs",
+    "cms:worker": "node cms/worker.mjs --watch",
+    "cms:preview": "node cms/preview.mjs",
+    "cms:backup": "node cms/backup.mjs",
+    "cms:package": "node cms/package-release.mjs",
+    "cms:test": "node --test cms/tests/adapter.test.mjs && node cms/tests/accounts.mjs && node cms/tests/http.mjs && docker compose -f cms/compose.yaml exec -T cms php /opt/jel/integration.php"
   },
   "dependencies": {
     "gsap": "^3.15.0",

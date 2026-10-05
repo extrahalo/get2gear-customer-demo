@@ -14,7 +14,7 @@ export default function SiteHeader() {
   const t = useTranslations("header");
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const hrefFor = (item: (typeof NAV_ITEMS)[number]) => item === "news" ? "/news" : item === "descase" ? "/descase" : item === "directions" ? "/#divisions" : `/#${item}`;
+  const hrefFor = (item: (typeof NAV_ITEMS)[number]) => item === "videos" ? "/videos" : item === "news" ? "/news" : item === "descase" ? "/descase" : item === "directions" ? "/#divisions" : `/#${item}`;
 
   useEffect(() => {
     const update = () => setScrolled(window.scrollY > 48);

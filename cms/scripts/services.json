@@ -1,0 +1,5 @@
+{
+  "engineering": {"label": "Инженерия", "sourceImage": "engineering-team.webp"},
+  "equipment": {"label": "Оборудование", "sourceImage": "equipment-team.webp"},
+  "automation": {"label": "IT и автоматизация", "sourceImage": "it-team.webp"}
+}

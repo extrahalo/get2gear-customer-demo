@@ -6,7 +6,7 @@ export default async function CompanyApproach({ locale }: { locale: string }) {
   const industries = t.raw("industries.items") as { number: string; title: string; body: string }[];
   const capabilities = t.raw("capabilities.items") as { title: string; desc: string }[];
   const policies = t.raw("policies.items") as { number: string; title: string; body: string }[];
-  const video = () => <VideoSlot number="07" title={t("videos.items.industries.title")} summary={t("videos.items.industries.summary")} status={t("videos.status")} duration={t("videos.duration")} />;
+  const video = () => <VideoSlot number="07" title={t("videos.items.industries.title")} summary={t("videos.items.industries.summary")} status={t("videos.status")} />;
   return <>      <section id="industries" className="industries section-pad">
         <div className="shell section-heading">
           <p className="section-label" data-reveal>

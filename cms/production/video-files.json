@@ -1,0 +1,172 @@
+[
+  {
+    "path": "videos/20260929-final-delivery/DesCase_Breather_RU_Get2Gear_1080p.mp4",
+    "bytes": 10440622,
+    "sha256": "eab49beb64f87fdd3d8d0d63c83fae45570ca6d4f62172eeb48f74f63788995f"
+  },
+  {
+    "path": "videos/20260929-final-delivery/DesCase_Breather_RU_Get2Gear_poster.jpg",
+    "bytes": 80069,
+    "sha256": "d4a25836816dc1c1772fda004328372e8cf968dff33c6ed168d1922c5fe25a69"
+  },
+  {
+    "path": "videos/20260929-final-delivery/DesCase_Visual_Oil_Analysis_RU_Get2Gear_1080p.mp4",
+    "bytes": 7591349,
+    "sha256": "a4f20a5cc2c714f060bde46018919747e56638e88ac1f28c57cfec37755938e2"
+  },
+  {
+    "path": "videos/20260929-final-delivery/DesCase_Visual_Oil_Analysis_RU_Get2Gear_poster.jpg",
+    "bytes": 71029,
+    "sha256": "73f8ab15e9707e080cf4a8eee6221597c129fa17b2e391be0487c3dc066efeef"
+  },
+  {
+    "path": "videos/20260929-final-delivery/Get2Gear_V1_EN_1080p.mp4",
+    "bytes": 19285297,
+    "sha256": "02cd57d7a137af744646ca1ad57db2c3af57435a28ad97b17bb84e51bef2cb27"
+  },
+  {
+    "path": "videos/20260929-final-delivery/Get2Gear_V1_EN_poster.jpg",
+    "bytes": 145133,
+    "sha256": "bf3f640653ea2bf2ad20f2694965a239a914b37735ca50d1fc0cfb845bedc79b"
+  },
+  {
+    "path": "videos/20260929-final-delivery/Get2Gear_V1_RU_1080p.mp4",
+    "bytes": 19178166,
+    "sha256": "4bd28991953b615705507ef10d065e0e5539b00a279ff2bd50e9998ffbe96384"
+  },
+  {
+    "path": "videos/20260929-final-delivery/Get2Gear_V1_RU_poster.jpg",
+    "bytes": 145458,
+    "sha256": "7db9fbc0d05910ad5504a7b36119382a93a8bab2e7a9459ef2412983d8514b56"
+  },
+  {
+    "path": "videos/20260929-final-delivery/Get2Gear_V2_EN_1080p.mp4",
+    "bytes": 13459863,
+    "sha256": "a51486bfa2a0e83ba69fdda820fa85165bd257c70e5a8c7a79ca81e593aef55b"
+  },
+  {
+    "path": "videos/20260929-final-delivery/Get2Gear_V2_EN_poster.jpg",
+    "bytes": 96258,
+    "sha256": "2aeb252188419d8110947fd6214979ab2b4f06cb015008945ec9301aa70c6e48"
+  },
+  {
+    "path": "videos/20260929-final-delivery/Get2Gear_V2_RU_1080p.mp4",
+    "bytes": 13484507,
+    "sha256": "05a5ca5e646c9fba387fa7b47c4bf5fed40cf0fe950dd7b56c2ec3fcbf84ad2c"
+  },
+  {
+    "path": "videos/20260929-final-delivery/Get2Gear_V2_RU_poster.jpg",
+    "bytes": 99716,
+    "sha256": "e820b43fec4ee1d235f9400b99cd8fa1df9bcbe96cfd223b0f1139b2cd188f87"
+  },
+  {
+    "path": "videos/20260929-final-delivery/Get2Gear_V3_EN_1080p.mp4",
+    "bytes": 17512941,
+    "sha256": "d32285cae7c002a5aba3b25df97527ea8f63f68c75ddeeaefd677d56e83ed7e4"
+  },
+  {
+    "path": "videos/20260929-final-delivery/Get2Gear_V3_EN_poster.jpg",
+    "bytes": 105691,
+    "sha256": "d76477c029b5aca3e2c2ed8d96caf18ebbbfe0b5af14da362d21ae2e24dbbc4b"
+  },
+  {
+    "path": "videos/20260929-final-delivery/Get2Gear_V3_RU_1080p.mp4",
+    "bytes": 17480773,
+    "sha256": "6da2f9a8796bd542cb8269a633139844154d98b2fd1308625105ccd47d8246d5"
+  },
+  {
+    "path": "videos/20260929-final-delivery/Get2Gear_V3_RU_poster.jpg",
+    "bytes": 105819,
+    "sha256": "41ec65cb5319247082952bf69979122cf128fd12b532121700a4b83faa3b876a"
+  },
+  {
+    "path": "videos/20260929-final-delivery/Get2Gear_V4_EN_1080p.mp4",
+    "bytes": 10875181,
+    "sha256": "500e463f1188d7a064d788d72c8f067e218718eeb4f064b337e3fd2966415fb1"
+  },
+  {
+    "path": "videos/20260929-final-delivery/Get2Gear_V4_EN_poster.jpg",
+    "bytes": 122838,
+    "sha256": "0ba506e9e26ce679ae62abd54fe3beb13c3f61e5a67a0d21e9ad1e2f23678076"
+  },
+  {
+    "path": "videos/20260929-final-delivery/Get2Gear_V4_RU_1080p.mp4",
+    "bytes": 10974331,
+    "sha256": "30ade0f7bf805ee6ba8ee78b64ee3b45f7ba49f8676db40916879926859d6682"
+  },
+  {
+    "path": "videos/20260929-final-delivery/Get2Gear_V4_RU_poster.jpg",
+    "bytes": 126416,
+    "sha256": "32b345f7f81bc8257c9215c504828e9671e27d3f250acb296a31452e3dda78e4"
+  },
+  {
+    "path": "videos/20260929-final-delivery/Get2Gear_V5_EN_1080p.mp4",
+    "bytes": 17864169,
+    "sha256": "1b66c3fb84e20a3d1b6e61d0003f905acfbc4bae1d0c73102b766c9235757d91"
+  },
+  {
+    "path": "videos/20260929-final-delivery/Get2Gear_V5_EN_poster.jpg",
+    "bytes": 119954,
+    "sha256": "401511133eefe59378fb71b032c39185911ec134274d9c8c1f076a703ae83ae4"
+  },
+  {
+    "path": "videos/20260929-final-delivery/Get2Gear_V5_RU_1080p.mp4",
+    "bytes": 17849985,
+    "sha256": "a835af8215465f091afe7a2ecb14c98d760c11f721ad6609e1a4606e7f6d5447"
+  },
+  {
+    "path": "videos/20260929-final-delivery/Get2Gear_V5_RU_poster.jpg",
+    "bytes": 115751,
+    "sha256": "ee786b1c6681d9ecf3d54e14fe47f182b41f1e641d28ce43f8cb99b33d574ca5"
+  },
+  {
+    "path": "videos/20260929-final-delivery/Get2Gear_V6_EN_1080p.mp4",
+    "bytes": 15596588,
+    "sha256": "5db76c863cb0fa03bef3a9f6ccd2bbcb6e463b6bea9dd6492554b2b703e8c80a"
+  },
+  {
+    "path": "videos/20260929-final-delivery/Get2Gear_V6_EN_poster.jpg",
+    "bytes": 135946,
+    "sha256": "ba8a42a8263fe29a90da6200cd6342d3ea526c7353873a0d3a27631cbbbe3544"
+  },
+  {
+    "path": "videos/20260929-final-delivery/Get2Gear_V6_RU_1080p.mp4",
+    "bytes": 15703353,
+    "sha256": "b313575db8bee48a5efce1f963591eb8f5814c69f96592d241a3bab16b4d0147"
+  },
+  {
+    "path": "videos/20260929-final-delivery/Get2Gear_V6_RU_poster.jpg",
+    "bytes": 135521,
+    "sha256": "1a6bbcf84196a4014232bf8993f7660ef2fbebdb3d950e26ae8c03174cd22713"
+  },
+  {
+    "path": "videos/20260929-final-delivery/Get2Gear_V7_EN_1080p.mp4",
+    "bytes": 17050095,
+    "sha256": "a5a211c04557d7933af7dcafcf398038e3aa137a44eaa1ec9ee078057ce069c7"
+  },
+  {
+    "path": "videos/20260929-final-delivery/Get2Gear_V7_EN_poster.jpg",
+    "bytes": 261991,
+    "sha256": "ef17bf3299ff44bc754dd4b4202fe86ea7efdfae1304c6df5e02ce4a68c80ba7"
+  },
+  {
+    "path": "videos/20260929-final-delivery/Get2Gear_V7_RU_1080p.mp4",
+    "bytes": 17029049,
+    "sha256": "7cbb69de0cee2f511eef2f195370682d1e091aec3ad6f8ab1a690d5a502bc838"
+  },
+  {
+    "path": "videos/20260929-final-delivery/Get2Gear_V7_RU_poster.jpg",
+    "bytes": 259568,
+    "sha256": "21cd4d63cadc57d7ac35cfe5f6c56fb0f46babe7026b78cfff075a9307b3a93a"
+  },
+  {
+    "path": "videos/20260929-final-delivery/RMF_Off-line_Filter_Unit_Get2Gear_contacts_1080p.mp4",
+    "bytes": 24589328,
+    "sha256": "0f2fe6d5d9a1cfb76f3d6b705de2fe88e23c452661ae9ea1c072c30169b00075"
+  },
+  {
+    "path": "videos/20260929-final-delivery/RMF_Off-line_Filter_Unit_Get2Gear_contacts_poster.jpg",
+    "bytes": 111174,
+    "sha256": "8b488941b1135588bdfda8fd5daaa4089e499e938578bddfd49d4cb573d0fb60"
+  }
+]

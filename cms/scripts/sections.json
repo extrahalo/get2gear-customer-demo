@@ -1,0 +1,43 @@
+{
+  "jelCompany": {
+    "label": "О компании и снабжение",
+    "fields": {
+      "statementLabel": ["home.statement.label", "О компании · подпись"],
+      "statementTitle": ["home.statement.title", "О компании · заголовок"],
+      "statementBody": ["home.statement.body", "О компании · описание"],
+      "equipmentLabel": ["home.equipment.label", "Снабжение · подпись"],
+      "equipmentTitle": ["home.equipment.title", "Снабжение · заголовок"],
+      "equipmentBody": ["home.equipment.body", "Снабжение · описание"],
+      "equipmentCta": ["home.equipment.cta", "Снабжение · кнопка"],
+      "footerTagline": ["home.footer.tagline", "Подвал · профиль компании"],
+      "footerLocations": ["home.footer.locations", "Подвал · география"]
+    }
+  },
+  "jelDirections": {
+    "label": "Направления и бренды · вступления",
+    "fields": {
+      "divisionsLabel": ["home.divisions.label", "Направления · подпись"],
+      "divisionsTitle": ["home.divisions.title", "Направления · заголовок"],
+      "brandsLabel": ["home.brands.label", "Бренды · подпись"],
+      "brandsTitle": ["home.brands.title", "Бренды · заголовок"],
+      "brandsNote": ["home.brands.note", "Бренды · описание"],
+      "descaseTitle": ["home.descase.teaserTitle", "Des-Case · заголовок на главной"],
+      "descaseBody": ["home.descase.teaserBody", "Des-Case · описание на главной"],
+      "approachTitle": ["home.services.approachTitle", "Страницы направлений · подход"],
+      "ctaTitle": ["home.services.ctaTitle", "Страницы направлений · заголовок контакта"],
+      "ctaBody": ["home.services.ctaBody", "Страницы направлений · описание контакта"]
+    }
+  },
+  "jelContacts": {
+    "label": "Контакты и адреса",
+    "optional": ["addressAstana", "addressShymkent"],
+    "fields": {
+      "label": ["home.contact.label", "Контакты · подпись"],
+      "title": ["home.contact.title", "Контакты · заголовок"],
+      "body": ["home.contact.body", "Контакты · описание"],
+      "addressAlmaty": ["home.contact.locations.0", "Адрес · Алматы"],
+      "addressAstana": ["home.contact.locations.1", "Адрес · Астана (пусто — скрыт)"],
+      "addressShymkent": ["home.contact.locations.2", "Адрес · Шымкент (пусто — скрыт)"]
+    }
+  }
+}

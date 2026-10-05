@@ -6,10 +6,12 @@ import StudioCredit from "@/components/StudioCredit";
 import FooterContacts from "@/components/FooterContacts";
 import ContactRequestForm from "@/components/ContactRequestForm";
 import VideoSlot from "@/components/VideoSlot";
+import VideoIndexRow from "@/components/VideoIndexRow";
 import NewsCards from "@/components/NewsCards";
 import { news, newsLabels } from "@/lib/news";
 import type { Locale } from "@/lib/site";
 import {
+  videoDemonstrations,
   videoStories,
   type VideoStoryId,
 } from "@/content/industrial";
@@ -36,7 +38,7 @@ type Division = {
 };
 
 type VideoCopy = { title: string; summary: string };
-type Brand = string | { name: string; logo?: string | null; url?: string };
+type Brand = string | { name: string; logo?: string | null; caption?: string; url?: string };
 type ContactCopy = {
   label: string; title: string; body: string; email: string; projectsEmail: string; whatsapp: string;
   phoneLabel: string; locationsLabel: string; socialLabel: string;
@@ -59,6 +61,7 @@ export default async function HomePage({
   const equipmentMeta = t.raw("equipment.meta") as string[];
   const brands = t.raw("brands.items") as Brand[];
   const videos = t.raw("videos.items") as Record<VideoStoryId, VideoCopy>;
+  const demonstrations = t.raw("videos.demonstrations") as Record<string, VideoCopy>;
   const contact = t.raw("contact") as ContactCopy;
 
   const video = (id: VideoStoryId, compact = false, inverse = false) => {
@@ -71,7 +74,6 @@ export default async function HomePage({
         title={videos[id].title}
         summary={videos[id].summary}
         status={t("videos.status")}
-        duration={t("videos.duration")}
         compact={compact}
         inverse={inverse}
       />
@@ -153,7 +155,12 @@ export default async function HomePage({
 
         <div className="shell division-list">
           {divisions.map((division) => (
-            <article className={`division-card division-card--${division.slug}`} key={division.num} data-reveal>
+            <Link
+              className={`division-card division-card--${division.slug}`}
+              href={`/${division.slug}`}
+              key={division.num}
+              data-reveal
+            >
               <Image
                 src={assetPath(division.image)}
                 alt=""
@@ -168,14 +175,40 @@ export default async function HomePage({
               <div className="division-card__body">
                 <h3>{division.title}</h3>
                 <p>{division.desc}</p>
-                <Link href={`/${division.slug}`}>
+                <span className="division-card__cta">
                   {division.cta}
                   <span aria-hidden="true">↗</span>
-                </Link>
+                </span>
               </div>
-            </article>
+            </Link>
           ))}
         </div>
+      </section>
+
+      <section id="videos" className="video-index section-pad" data-dark>
+        <div className="shell video-index__heading">
+          <p className="section-label section-label--light" data-reveal>
+            <i /> {t("videos.label")}
+          </p>
+          <div>
+            <h2 data-reveal>{t("videos.title")}</h2>
+            <p data-reveal>{t("videos.note")}</p>
+          </div>
+        </div>
+        <ol className="shell video-index__list">
+          {videoStories.map((story) => (
+            <VideoIndexRow key={story.id} number={story.number} title={videos[story.id].title}
+              placement={t(`videos.placements.${story.placement}`)} duration={story.duration}
+              poster={assetPath(`/videos/20260929-final-delivery/Get2Gear_V${Number(story.number)}_${locale === "en" ? "EN" : "RU"}_poster.jpg`)}
+              href={`/videos#v${Number(story.number)}`} watchLabel={t("videos.watch")} />
+          ))}
+          {videoDemonstrations.map((demo) => (
+            <VideoIndexRow key={demo.id} number={demo.number} title={demonstrations[demo.id].title}
+              placement={t("videos.placements.demonstration")} duration={demo.duration}
+              poster={assetPath(`/videos/20260929-final-delivery/${demo.file.replace(/_1080p\.mp4$/, "_poster.jpg")}`)}
+              href={`/videos#${demo.id}`} watchLabel={t("videos.watch")} />
+          ))}
+        </ol>
       </section>
 
       <section className="brands section-pad">
@@ -194,7 +227,10 @@ export default async function HomePage({
               const item = typeof brand === "string" ? { name: brand } : brand;
               const duplicate = index >= brands.length;
               const label = item.logo ? (
-                <Image src={assetPath(item.logo)} alt={item.name} width={160} height={64} className="brand-rail__logo" />
+                <>
+                  <Image src={assetPath(item.logo)} alt={item.name === "MECS" ? "Elessent Clean Technologies" : item.name} width={180} height={72} className="brand-rail__logo" />
+                  {item.caption && <small>{item.caption}</small>}
+                </>
               ) : item.name;
               return (
                 <span key={`${item.name}-${index}`} aria-hidden={duplicate || undefined}>
@@ -217,28 +253,6 @@ export default async function HomePage({
             {t("descase.cta")} <span aria-hidden="true">↗</span>
           </Link>
         </div>
-      </section>
-
-      <section id="videos" className="video-index section-pad" data-dark>
-        <div className="shell video-index__heading">
-          <p className="section-label section-label--light" data-reveal>
-            <i /> {t("descase.generalVideoLabel")}
-          </p>
-          <div>
-            <h2 data-reveal>{t("descase.generalVideoTitle")}</h2>
-            <p data-reveal>{t("descase.generalVideoNote")}</p>
-          </div>
-        </div>
-        <ol className="shell video-index__list">
-          {videoStories.filter((story) => story.id === "company" || story.id === "industries").map((story) => (
-            <li key={story.id} data-reveal>
-              <span>{story.number}</span>
-              <strong>{videos[story.id].title}</strong>
-              <em>{t(`videos.placements.${story.placement}`)}</em>
-              <i>{t("videos.statusShort")}</i>
-            </li>
-          ))}
-        </ol>
       </section>
 
       <section id="contacts" className="contact-panel">

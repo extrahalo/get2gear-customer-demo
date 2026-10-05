@@ -25,11 +25,14 @@ export default function Experience({ children }: { children: React.ReactNode }) 
     gsap.ticker.lagSmoothing(0);
 
     const context = gsap.context(() => {
-      gsap.fromTo(
-        ".hero__eyebrow, .hero__title, .hero__lead, .hero__actions",
-        { y: 36, opacity: 0 },
-        { y: 0, opacity: 1, duration: 1.05, stagger: 0.12, ease: "power3.out", delay: 0.15 },
-      );
+      const heroElements = document.querySelectorAll(".hero__eyebrow, .hero__title, .hero__lead, .hero__actions");
+      if (heroElements.length) {
+        gsap.fromTo(
+          heroElements,
+          { y: 36, opacity: 0 },
+          { y: 0, opacity: 1, duration: 1.05, stagger: 0.12, ease: "power3.out", delay: 0.15 },
+        );
+      }
 
       gsap.utils.toArray<HTMLElement>("[data-reveal]").forEach((element) => {
         gsap.fromTo(

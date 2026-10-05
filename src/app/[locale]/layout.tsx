@@ -51,13 +51,14 @@ export async function generateMetadata({
     title: t("title"),
     description: t("description"),
     alternates: {
-      canonical: `/${locale}`,
-      languages: { ru: "/ru", kk: "/kk", en: "/en" },
+      canonical: `/${locale}/`,
+      languages: { ru: "/ru/", kk: "/kk/", en: "/en/", "x-default": "/ru/" },
     },
     openGraph: {
       title: t("title"),
       description: t("description"),
       type: "website",
+      url: `${SITE_URL}/${locale}/`,
       locale,
       siteName: "Get2Gear",
       images: [

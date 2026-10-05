@@ -5,6 +5,7 @@ import { Link } from "@/i18n/navigation";
 import SiteHeader from "@/components/SiteHeader";
 import StudioCredit from "@/components/StudioCredit";
 import VideoSlot from "@/components/VideoSlot";
+import VideoIndexRow from "@/components/VideoIndexRow";
 import { productSystems, proofGallery, videoStories, type ProductSystemId, type VideoStoryId } from "@/content/industrial";
 import { assetPath, SITE_URL } from "@/lib/site";
 import FooterContacts from "@/components/FooterContacts";
@@ -32,11 +33,16 @@ export default async function DescasePage({ params }: { params: Promise<{ locale
   const videos = t.raw("videos.items") as Record<VideoStoryId, VideoCopy>;
   const resultStats = t.raw("results.stats") as ResultStat[];
   const articles = t.raw("news.items") as Article[];
+  const demonstrationLinks = locale === "en"
+    ? [{id: "descase-breather", title: "Des-Case: breather", note: "Russian narration and subtitles"}, {id: "descase-oil-analysis", title: "Des-Case: visual oil analysis", note: "Russian narration and subtitles"}]
+    : locale === "kk"
+      ? [{id: "descase-breather", title: "Des-Case: сапун", note: "Орысша дыбыстау және субтитрлер"}, {id: "descase-oil-analysis", title: "Des-Case: майды визуалды бақылау", note: "Орысша дыбыстау және субтитрлер"}]
+      : [{id: "descase-breather", title: "Des-Case: сапун", note: "Русская озвучка и субтитры"}, {id: "descase-oil-analysis", title: "Des-Case: визуальный контроль масла", note: "Русская озвучка и субтитры"}];
   const video = (id: VideoStoryId, compact = false, inverse = false) => {
     const record = videoStories.find((item) => item.id === id);
     if (!record) return null;
     return <VideoSlot number={record.number} title={videos[id].title} summary={videos[id].summary}
-      status={t("videos.status")} duration={t("videos.duration")} compact={compact} inverse={inverse} />;
+      status={t("videos.status")} compact={compact} inverse={inverse} />;
   };
   return (
     <main className="descase-page">
@@ -203,13 +209,16 @@ export default async function DescasePage({ params }: { params: Promise<{ locale
         </div>
         <ol className="shell video-index__list">
           {videoStories.filter((story) => story.id !== "company" && story.id !== "industries").map((story) => (
-            <li key={story.id} data-reveal>
-              <span>{story.number}</span>
-              <strong>{videos[story.id].title}</strong>
-              <em>{t(`videos.placements.${story.placement}`)}</em>
-              <i>{t("videos.statusShort")}</i>
-            </li>
+            <VideoIndexRow key={story.id} number={story.number} title={videos[story.id].title}
+              placement={t(`videos.placements.${story.placement}`)} duration={story.duration}
+              poster={assetPath(`/videos/20260929-final-delivery/Get2Gear_V${Number(story.number)}_${locale === "en" ? "EN" : "RU"}_poster.jpg`)}
+              href={`/videos#v${Number(story.number)}`} watchLabel={t("videos.watch")} />
           ))}
+          {demonstrationLinks.map((item, index) => <VideoIndexRow key={item.id}
+            number={String(index + 9).padStart(2, "0")} title={item.title} placement={item.note}
+            duration={index === 0 ? "01:33" : "01:03"}
+            poster={assetPath(`/videos/20260929-final-delivery/${index === 0 ? "DesCase_Breather_RU_Get2Gear" : "DesCase_Visual_Oil_Analysis_RU_Get2Gear"}_poster.jpg`)}
+            href={`/videos#${item.id}`} watchLabel={t("videos.watch")} />)}
         </ol>
       </section>
 
